@@ -34,27 +34,30 @@
     "typescript": "^5.3.3"
   },
   "build": {
-    "appId": "com.proxydatasaver.app",
-    "productName": "Proxy Data Saver",
-    "files": [
-      "out/**/*"
-    ],
-    "extraResources": [
-      {
-        "from": "resources/icons",
-        "to": "icons"
-      }
-    ],
-    "win": {
-      "target": "nsis",
-      "icon": "resources/icons/icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "Proxy Data Saver"
+  "appId": "com.proxydatasaver.app",
+  "productName": "Proxy Data Saver",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "out/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "resources/icons",
+      "to": "icons"
     }
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "resources/icons/icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Proxy Data Saver"
   }
+}
 }
